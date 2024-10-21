@@ -13,58 +13,67 @@ body {
     text-align: center;
     padding: 20px;
     line-height: 1.6;
+    background-image: linear-gradient(135deg, #f0f4f8, #e6ecf1); /* Soft gradient background */
 }
 
 /* Header */
 header {
     background: linear-gradient(135deg, #0066cc, #003366); /* Deep blue gradient */
     color: #fff;
-    padding: 30px 0;
+    padding: 50px 0;
     margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 header h1 {
-    font-size: 2.5em;
-    letter-spacing: 1px;
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     opacity: 0.9;
+    letter-spacing: 1px;
 }
 
 /* Pricing Section */
 #pricing {
     background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-bottom: 60px;
     border-top: 5px solid #0066cc; /* Accent border for style */
+    transition: box-shadow 0.3s ease;
 }
 
 #pricing h2 {
-    font-size: 1.8em;
+    font-size: 2.5em;
     color: #0066cc; /* Matching header accent */
     margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 #pricing table {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     border-collapse: collapse;
     font-size: 1em;
 }
 
 #pricing th, #pricing td {
-    padding: 15px;
+    padding: 20px;
     border: 1px solid #ddd;
     text-align: center;
     background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
 }
 
 #pricing th {
-    background-color: #0066cc; /* Blue header */
+    background-color: #004d99; /* Darker blue header */
     color: #fff;
     text-transform: uppercase;
 }
@@ -79,79 +88,104 @@ header p {
 
 /* Buttons */
 button {
-    background-color: #0066cc; /* Bright accent color */
+    background-color: #007bff; /* Brighter accent color */
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 30px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 button:hover {
-    background-color: #004d99; /* Slightly darker on hover */
+    background-color: #005bb5; /* Slightly darker on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
 
 /* Photo Gallery */
 #gallery {
     background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
 #gallery h2 {
-    font-size: 1.8em;
+    font-size: 2.5em;
     color: #0066cc;
     margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .photo-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
 
 .photo {
     flex: 1;
-    max-width: 300px;
+    max-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .photo img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.photo:hover {
+    transform: scale(1.03);
+}
+
 .photo img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
 /* Footer */
 footer {
     background-color: #003366; /* Dark blue to match the header */
     color: #fff;
-    padding: 15px 0;
+    padding: 20px 0;
     margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
 }
 
 footer p {
-    font-size: 0.9em;
+    font-size: 1em;
     opacity: 0.8;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     #pricing table {
-        font-size: 0.85em;
+        font-size: 0.9em;
     }
 
     .photo-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px 20px;
     }
 }
