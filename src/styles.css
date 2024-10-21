@@ -1,57 +1,161 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif; /* Elegant and clean font */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f8f9fa;
     color: #333;
     text-align: center;
     padding: 20px;
+    line-height: 1.6;
 }
 
+/* Header */
 header {
-    background-color: #444;
+    background: linear-gradient(135deg, #444, #222);
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-h1, h2 {
-    margin: 0;
-    padding: 10px;
+header h1 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Pricing Table */
+#pricing {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+#pricing h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #444;
 }
 
 #pricing table {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     border-collapse: collapse;
+    font-size: 0.95em;
 }
 
 #pricing th, #pricing td {
-    padding: 12px;
+    padding: 15px;
     border: 1px solid #ddd;
     text-align: center;
 }
 
 #pricing th {
-    background-color: #222;
+    background-color: #444;
     color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#pricing tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+#pricing tbody tr:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+/* Photo Gallery */
+#gallery {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+#gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #444;
 }
 
 .photo-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
     margin-top: 20px;
+}
+
+.photo {
+    flex: 1;
+    min-width: 280px;
 }
 
 .photo img {
-    width: 300px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.photo p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Footer */
 footer {
     background-color: #222;
     color: #fff;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 15px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+}
+
+footer p {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #pricing table {
+        font-size: 0.85em;
+    }
+
+    .photo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
 }
