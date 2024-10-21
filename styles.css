@@ -3,12 +3,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', Arial, sans-serif; /* Elegant and clean font */
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 body {
     font-family: 'Poppins', Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #f4f7fc; /* Light, clean background */
     color: #333;
     text-align: center;
     padding: 20px;
@@ -17,127 +17,131 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #444, #222);
+    background: linear-gradient(135deg, #0066cc, #003366); /* Deep blue gradient */
     color: #fff;
-    padding: 20px 0;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 30px 0;
+    margin-bottom: 40px;
 }
 
 header h1 {
     font-size: 2.5em;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 header p {
-    font-style: italic;
-    font-size: 1.1em;
+    font-size: 1.2em;
     opacity: 0.9;
 }
 
-/* Pricing Table */
+/* Pricing Section */
 #pricing {
     background-color: #fff;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    border-top: 5px solid #0066cc; /* Accent border for style */
 }
 
 #pricing h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #444;
+    font-size: 1.8em;
+    color: #0066cc; /* Matching header accent */
+    margin-bottom: 30px;
 }
 
 #pricing table {
     width: 90%;
     margin: 0 auto;
     border-collapse: collapse;
-    font-size: 0.95em;
+    font-size: 1em;
 }
 
 #pricing th, #pricing td {
     padding: 15px;
     border: 1px solid #ddd;
     text-align: center;
+    background-color: #f9f9f9;
 }
 
 #pricing th {
-    background-color: #444;
+    background-color: #0066cc; /* Blue header */
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-#pricing tbody tr:nth-child(even) {
-    background-color: #f4f4f4;
+#pricing tr:nth-child(even) {
+    background-color: #eef5fc; /* Light blue for alternating rows */
 }
 
-#pricing tbody tr:hover {
-    background-color: #eaeaea;
+#pricing tr:hover {
+    background-color: #d8e6f5; /* Soft blue hover effect */
+}
+
+/* Buttons */
+button {
+    background-color: #0066cc; /* Bright accent color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d99; /* Slightly darker on hover */
 }
 
 /* Photo Gallery */
 #gallery {
     background-color: #fff;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
 }
 
 #gallery h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #444;
+    font-size: 1.8em;
+    color: #0066cc;
+    margin-bottom: 30px;
 }
 
 .photo-container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 20px;
+    gap: 20px;
 }
 
 .photo {
     flex: 1;
-    min-width: 280px;
+    max-width: 300px;
 }
 
 .photo img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo img:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-}
-
-.photo p {
-    margin-top: 10px;
-    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 /* Footer */
 footer {
-    background-color: #222;
+    background-color: #003366; /* Dark blue to match the header */
     color: #fff;
     padding: 15px 0;
     margin-top: 40px;
-    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
 }
 
 footer p {
     font-size: 0.9em;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 /* Responsive Design */
@@ -149,13 +153,5 @@ footer p {
     .photo-container {
         flex-direction: column;
         align-items: center;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    header p {
-        font-size: 1em;
     }
 }
